@@ -1,0 +1,10 @@
+ultrasuono_dx = trig-6, echo-5
+ultrasuono_sx = trig-8, echo-7
+ultrasuono_centrale = trig-12, echo-13
+
+IR_dx = 3
+IR_sx = 4
+IR_centrale = 2 
+
+Servo_dx = 9 
+Servo_sx = 10
