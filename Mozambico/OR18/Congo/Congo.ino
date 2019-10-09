@@ -4,8 +4,9 @@ pinMode() imposta il pin
 pulseIn() timer impulsi da low ad high vice versa
 */
 
+//SUMO
 
-//LINE FOLLOWER
+
 #include <Servo.h>
 #include <PID_v1.h>
 
@@ -22,9 +23,9 @@ PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 
 // Valori Infrarossi
 #define BIANCO 260
-int irs = A3;
-int irc = A2;
-int ird = A1;
+int irs = 4;
+int irc = 2;
+int ird = 3;
 
 
 // Direzioni Servo
@@ -35,12 +36,12 @@ int ird = A1;
 #define Destra_Dietro 0
 
 
-#define trigPinDestra 1
-#define echoPinDestra 1
-#define trigPinSinistra 2
-#define echoPinSinistra 2
-#define trigPinCentro 3
-#define echoPinCentro 3
+#define trigPinDestra 6
+#define echoPinDestra 5
+#define trigPinSinistra 8
+#define echoPinSinistra 7
+#define trigPinCentro 11
+#define echoPinCentro 12
 /*
   #define Fermo 90
   #define Sinistra_Avanti 60
@@ -307,7 +308,7 @@ void setup() {
   // put your setup code here, to run once:
   randomSeed(2340234);
   Serial.begin(9600);
-  Ruota_Sinistra.attach(8); //TODO: Controllare i pin dei servo
+  Ruota_Sinistra.attach(10); //TODO: Controllare i pin dei servo
   Ruota_Destra.attach(9); //TODO: Controllare i pin dei servo
 
   delay(5000);
